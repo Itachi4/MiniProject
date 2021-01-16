@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="register.js"></script>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+<body">
+    
+    <div class="login-box">
+        
+            
+                <h1>REGISTER</h1>
+                
+                <div class="textbox">
+                    <input type="text" id="first"  placeholder="Full Name">
+                </div>
+                <div class="textbox">
+                    <input type="email" id="mail" placeholder="Email Id">
+                </div>
+                <div class=" textbox">
+                    <input type="date" style="color: grey;" id="dob"  placeholder="dd/mm/yyyy">
+                </div>
+                <div class=" textbox">
+                    <input type="text" id="number"  placeholder="Mobile Number">
+                </div>
+                <div class=" textbox">
+                    <input type="text" id="uname"  placeholder="Username"  aria-describedby="basic-addon1">
+                </div>
+                <div class=" textbox">
+                        <input type="password" id="pass"  placeholder="password">
+                    </div>
+                <div class="textbox">
+                        <select id="nation" >
+                          <option >usa</option>
+                          <option >africa</option>
+                          <option >india</option>
+                          <option >canada</option>
+                          <option >dubai</option>
+                          <option selected>--select nation--</option>
+                        </select>
+                </div>                
+                <div >
+                    <input type="submit" onclick="register()" class="button btn-success" value="Submit">
+                </div>
+                <p align="center">Already have account?<a href="login.html" style="color: green">Login Here!</a></p>
+            
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-analytics.js"></script>
+    
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyDzN_ZyJb0BSK7CwdChl8GZeZRsnKYaXfA",
+        authDomain: "miniproject-fe143.firebaseapp.com",
+        databaseURL: "https://miniproject-fe143.firebaseio.com",
+        projectId: "miniproject-fe143",
+        storageBucket: "miniproject-fe143.appspot.com",
+        messagingSenderId: "974920227667",
+        appId: "1:974920227667:web:24cb351949c4afa9af5fa6",
+        measurementId: "G-6TLPERNQYB"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    </script>
+</body>
+</html>
